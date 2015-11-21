@@ -5,6 +5,9 @@ makeCacheMatrix <- function(x = matrix()) {
     ## Returns a wrapper which can store a matrix and cache the inverse of it
     
     ## I use self. notation to point these are some kind of object fields
+    ## I could use simple just 'x' but it makes more readable especially
+    ## in a longer functions
+    self.matrix <- x
     self.inverse <- NULL
 
     set <- function(aMatrix) {
